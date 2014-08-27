@@ -1,0 +1,35 @@
+{
+    "name" : "lukaszmordawski/campaign-monitor-bundle",
+    "description" : "Campaign Monitor Bundle for Symfony 2",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Lukasz Mordawski",
+        "email" : "lukasz.mordawski@gmail.com"
+    }],
+    "keywords" : [
+        "campaign monitor createsend bundle symfony2"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": ">=5.4.24",
+        "campaignmonitor/createsend-php": "v4.0.1",
+        "doctrine/common": "~2.2,>=2.2.3"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "LukaszMordawski\\CampaignMonitorBundle" : ""
+        }
+    },
+    "target-dir" : "LukaszMordawski/CampaignMonitorBundle",
+    "repositories" : [{
+        "type": "vcs",
+        "url": "https://github.com/LukaszMordawski/CampaignMonitorBundle"
+    }],
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "1.0-dev"
+        }
+    }
+}

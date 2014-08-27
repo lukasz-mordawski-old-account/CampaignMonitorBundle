@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="campaign_monitor.service_factory" class="LukaszMordawski\CampaignMonitorBundle\Service\Factory">
+            <argument>%lukaszmordawski_create_send_api_key%</argument>
+        </service>
+        <service id="campaign_monitor.invoker" class="LukaszMordawski\CampaignMonitorBundle\Service\Invoker">
+            <argument type="service" id="campaign_monitor.service_factory" />
+            <argument type="service" id="campaign_monitor.cache" />
+            <argument>%lukaszmordawski_create_send_client_id%</argument>
+            <argument>%lukaszmordawski_create_send_cache_lifetime%</argument>
+        </service>
+        <service id="campaign_monitor.cache" class="Doctrine\Common\Cache\PhpFileCache">
+            <argument>%kernel.cache_dir%/campaignmonitor</argument>
+        </service>
+    </services>
+</container>
