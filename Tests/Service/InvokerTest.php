@@ -1,6 +1,6 @@
 <?php
 
-namespace Stevens\MainBundle\Tests\Service;
+namespace LukaszMordawski\CampaignMonitorBundle\Tests\Service;
 
 use LukaszMordawski\CampaignMonitorBundle\Helper\FactoryArguments;
 use LukaszMordawski\CampaignMonitorBundle\Service\Invoker;
@@ -173,7 +173,7 @@ class InvokerTest extends \PHPUnit_Framework_TestCase {
             ->with('campaignmonitor'.
             md5(serialize($arguments)) .
             'dummy' .
-            md5(serialize([1])), 3600);
+            md5(serialize([1])), 's:10:"a response";', 3600);
 
         $this->service->invoke(
             $arguments, 'dummy', [ 1 ]

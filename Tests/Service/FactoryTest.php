@@ -1,6 +1,6 @@
 <?php
 
-namespace Stevens\MainBundle\Tests\Service\CampaignMonitor;
+namespace LukaszMordawski\CampaignMonitorBundle\Tests\Service\CampaignMonitor;
 
 use LukaszMordawski\CampaignMonitorBundle\Helper\FactoryArguments;
 use LukaszMordawski\CampaignMonitorBundle\Service\Factory;
