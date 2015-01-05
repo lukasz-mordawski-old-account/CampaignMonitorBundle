@@ -68,10 +68,10 @@ class Invoker
 
         if (method_exists($csClient, $method)) {
             if (is_array($parameters)) {
-            	$data = call_user_func_array([$csClient, $method], $parameters);
-			} else {
-				$data = call_user_func([$csClient, $method], $parameters);
-			}
+                $data = call_user_func_array([$csClient, $method], $parameters);
+	    } else {
+                $data = call_user_func([$csClient, $method], $parameters);
+	    }
         }
         else {
             throw new \LogicException(
