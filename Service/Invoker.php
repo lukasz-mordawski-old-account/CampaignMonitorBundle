@@ -67,7 +67,11 @@ class Invoker
         $csClient = $this->factory->factory($arguments);
 
         if (method_exists($csClient, $method)) {
-            $data = call_user_func_array([$csClient, $method], $parameters);
+            if (is_array($parameters)) {
+                $data = call_user_func_array([$csClient, $method], $parameters);
+	    } else {
+                $data = call_user_func([$csClient, $method], $parameters);
+	    }
         }
         else {
             throw new \LogicException(
