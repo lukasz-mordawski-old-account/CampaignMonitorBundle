@@ -14,7 +14,7 @@
     ],
     "require" : {
         "php": ">=5.4.24",
-        "campaignmonitor/createsend-php": "~4.0",
+        "campaignmonitor/createsend-php": "~5.0",
         "doctrine/common": "~2.2,>=2.2.3"
     },
     "autoload" : {
