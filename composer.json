@@ -1,5 +1,5 @@
 {
-    "name" : "lukaszmordawski/campaign-monitor-bundle",
+    "name" : "budby/campaign-monitor-bundle",
     "description" : "Campaign Monitor Bundle for Symfony 2",
     "type" : "symfony-bundle",
     "authors" : [{
