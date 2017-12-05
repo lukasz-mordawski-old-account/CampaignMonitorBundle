@@ -102,7 +102,7 @@ class Factory
      * This method returns wrapper class name.
      */
     private function getClassName($endpoint) {
-        $endpoint = ucfirst(strtolower($endpoint));
+        $endpoint = ucfirst($endpoint);
         return 'CS_REST_' . $endpoint;
     }
 
