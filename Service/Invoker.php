@@ -79,7 +79,7 @@ class Invoker
             );
         }
 
-        if ($data->http_status_code != 200 && $data->http_status_code != 201) {
+        if (!in_array($data->http_status_code, [200, 201, 202])) {
             throw new Exception($data->response->Message, $data->response->Code);
         }
 
